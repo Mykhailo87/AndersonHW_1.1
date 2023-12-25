@@ -1,13 +1,16 @@
 const value1 = prompt();
 const value2 = prompt();
 
-function newValue (a,b){
-    if(isNaN(a) || isNaN(b) || a.includes(' ') || b.includes(' ')){
-        console.log('Некорректный ввод!')
-        return
-    }else(
-        console.log((+a).toString(+b))
-    )
+function newValue(firstCheckingValue,secondCheckingValue) {
+
+    const isInvalid = isNaN(firstCheckingValue) || isNaN(secondCheckingValue) || 
+                      firstCheckingValue ===' ' || secondCheckingValue === ' ';
+
+    if (isInvalid) {
+        return console.log('Некорректный ввод!')
+    }                  
+
+    console.log((+firstCheckingValue).toString(+secondCheckingValue))
 }
 
 newValue(value1,value2);
