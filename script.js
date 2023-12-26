@@ -4,8 +4,7 @@ const value2 = prompt();
 function newValue(firstCheckingValue,secondCheckingValue) {
 
     const isInvalid = isNaN(firstCheckingValue) || isNaN(secondCheckingValue) || 
-                      firstCheckingValue === ' ' || secondCheckingValue === ' ' ||
-                      firstCheckingValue === '' || secondCheckingValue === '';
+                      firstCheckingValue.trim() === '' || secondCheckingValue.trim() === '';
 
     if (isInvalid) {
         return console.log('Некорректный ввод!')
